@@ -6,38 +6,37 @@
  * @version 1.0.0
  * date September 24 2018
  */
-
 public class CalculationLog {
-	private String opperand = "";
-	private double value1 = 0;
-	private double value2 = 0;
-	private double result = 0;
+	private String operand = "";
+	private double calculationValue1 = 0;
+	private double calculationValue2 = 0;
+	private double calculationResult = 0;
 	
 	public CalculationLog(String command, double value1, double value2, double result) {
-		this.value1 = value1;
-		this.value2 = value2;
-		this.result = result;
+		this.calculationValue1 = value1;
+		this.calculationValue2 = value2;
+		this.calculationResult = result;
 		switch (command) {
 			case "ADD":
-				this.opperand = "+";
+				this.operand = "+";
 				break;
 			case "SUBTRACT":
-				this.opperand = "-";
+				this.operand = "-";
 				break;
 			case "MULTIPLY":
-				this.opperand = "*";
+				this.operand = "*";
 				break;
 			case "DIVIDE":
-				this.opperand = "/";
+				this.operand = "/";
 				break;
 			case "MODULO":
-				this.opperand = "%";
+				this.operand = "%";
 				break;
 			case "EXPONENT":
-				this.opperand = "^";
+				this.operand = "^";
 				break;
 			case "ROOT":
-				this.opperand = "root";
+				this.operand = "root";
 				break;
 			default:
 				break;
@@ -46,7 +45,7 @@ public class CalculationLog {
 	
 	@Override
 	public String toString() {
-		return String.format("%s %s %s = %s.", this.value1, this.opperand, this.value2, this.result);
+		return String.format("%s %s %s = %s.", this.calculationValue1, this.operand, this.calculationValue2, this.calculationResult);
 	}
 
 }

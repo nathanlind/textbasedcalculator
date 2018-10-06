@@ -19,10 +19,10 @@ public class TextBasedCalculator {
 	public static void main(String[] args) {
 		
 		String command = "";
-		
 		Scanner commandScanner = new Scanner(System.in);
 		Calculator calculator = new Calculator();
 		ArrayList<CalculationLog> actionLogs = new ArrayList<CalculationLog>();
+		
 		
 		System.out.println("Type ON to begin.");
 		
@@ -33,7 +33,6 @@ public class TextBasedCalculator {
 		
 		System.out.println("**Welcome to TEXT BASED CALCULATOR.**");
 		
-		
 		do {
 			System.out.println("\nEnter command or type HELP to see options.");
 			
@@ -42,34 +41,34 @@ public class TextBasedCalculator {
 			
 			if (command.equals("ADD")) {
 				System.out.println(calculator.add());
-				actionLogs.add(new CalculationLog(command, calculator.getValue1(), calculator.getValue2(), calculator.getResult()));
+				actionLogs.add(new CalculationLog(command, calculator.getCalculationValue1(), calculator.getCalculationValue2(), calculator.getCalculationResult()));
 				
 			} else if (command.equals("SUBTRACT")) {
 				System.out.println(calculator.subtract());
-				actionLogs.add(new CalculationLog(command, calculator.getValue1(), calculator.getValue2(), calculator.getResult()));
+				actionLogs.add(new CalculationLog(command, calculator.getCalculationValue1(), calculator.getCalculationValue2(), calculator.getCalculationResult()));
 				
 			} else if (command.equals("MULTIPLY")) {
 				System.out.println(calculator.multiply());
-				actionLogs.add(new CalculationLog(command, calculator.getValue1(), calculator.getValue2(), calculator.getResult()));
+				actionLogs.add(new CalculationLog(command, calculator.getCalculationValue1(), calculator.getCalculationValue2(), calculator.getCalculationResult()));
 				
 			} else if (command.equals("DIVIDE")) {
 				System.out.println(calculator.divide());
-				actionLogs.add(new CalculationLog(command, calculator.getValue1(), calculator.getValue2(), calculator.getResult()));
+				actionLogs.add(new CalculationLog(command, calculator.getCalculationValue1(), calculator.getCalculationValue2(), calculator.getCalculationResult()));
 				
 			} else if (command.equals("MODULO")) {
 				System.out.println(calculator.modulo());
-				actionLogs.add(new CalculationLog(command, calculator.getValue1(), calculator.getValue2(), calculator.getResult()));
+				actionLogs.add(new CalculationLog(command, calculator.getCalculationValue1(), calculator.getCalculationValue2(), calculator.getCalculationResult()));
 				
 			} else if (command.equals("EXPONENT")) {
 				System.out.println(calculator.raisePower());
-				actionLogs.add(new CalculationLog(command, calculator.getValue1(), calculator.getValue2(), calculator.getResult()));
+				actionLogs.add(new CalculationLog(command, calculator.getCalculationValue1(), calculator.getCalculationValue2(), calculator.getCalculationResult()));
 				
 			} else if (command.equals("ROOT")) {
 				System.out.println(calculator.root());
-				actionLogs.add(new CalculationLog(command, calculator.getValue1(), calculator.getValue2(), calculator.getResult()));
+				actionLogs.add(new CalculationLog(command, calculator.getCalculationValue1(), calculator.getCalculationValue2(), calculator.getCalculationResult()));
 				
 			} else if (command.equals("SAVE")) {
-				calculator.setMemoryValue(calculator.getResult());
+				calculator.setMemoryValue(calculator.getCalculationResult());
 				System.out.printf("%s saved to memory. \n\n", calculator.getMemoryValue());
 				
 			} else if (command.equals("LOG")) {

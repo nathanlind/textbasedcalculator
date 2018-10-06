@@ -1,3 +1,6 @@
+import java.lang.Math;
+import java.util.Scanner;
+
 /**
  * The Calculator class is used by the TextBasedCalculator class
  * to perform calculations and handle input of values used in calculations.
@@ -5,17 +8,18 @@
  * @version 1.0.0
  * date September 24 2018
  */
-
-import java.lang.Math;
-import java.util.Scanner;
-
 public class Calculator {
 	
-	private double value1 = 0;
-	private double value2 = 0;
-	private double result = 0;
+	private double calculationValue1 = 0;
+	private double calculationValue2 = 0;
+	private double calculationResult = 0;
 	private double memoryValue = 0;
 	private Scanner valueScanner = new Scanner(System.in);
+	
+	
+	public Calculator() {
+		
+	}
 	
 
 	private void getValues() {
@@ -25,35 +29,35 @@ public class Calculator {
 	
 	private void inputValue1() {
 		System.out.print("Enter first number: ");
-		
+
 		try {
 		String input = valueScanner.nextLine();
 		input = input.trim().toUpperCase();
-		value1 = checkForSpecial(input);
+		calculationValue1 = checkForSpecial(input);
 		}
-		
+
 		catch (NumberFormatException e) {
-			System.out.println("Error: Please enter a number.");
+			System.out.println("Error - Please enter a number, MEM, or PI:");
 			inputValue1();
 		}
 	}
 	
 	private void inputValue2() {
 		System.out.print("Enter second number: ");
-		
+
 		try {
 		String input = valueScanner.nextLine();
 		input = input.trim().toUpperCase();
-		value2 = checkForSpecial(input);
+		calculationValue2 = checkForSpecial(input);
 		}
-		
+
 		catch (NumberFormatException e) {
-			System.out.println("Error: Please enter a number.");
+			System.out.println("Error - Please enter a number, MEM, or PI:");
 			inputValue2();
 		}
 	}
 
-	public double checkForSpecial(String valueCheck) {
+	private double checkForSpecial(String valueCheck) {
 		if (valueCheck.equals("PI")) {
 			return Math.PI;
 		} else if (valueCheck.equals("MEM")){
@@ -67,50 +71,50 @@ public class Calculator {
 	
 	public double add() {
 		getValues();
-		result = value1 + value2;
-		return result;
+		calculationResult = calculationValue1 + calculationValue2;
+		return calculationResult;
 	}
 	
 	public double subtract() {
 		getValues();
-		result = value1 - value2;
-		return result;
+		calculationResult = calculationValue1 - calculationValue2;
+		return calculationResult;
 	}
 	
 	public double multiply() {
 		getValues();
-		result = value1 * value2;
-		return result;
+		calculationResult = calculationValue1 * calculationValue2;
+		return calculationResult;
 	}
 	
 	public double divide() {
 		getValues();
-		if (value2 == 0) { //Checks if user is trying to divide by zero.
+		if (calculationValue2 == 0) { //Checks if user is trying to divide by zero.
 			System.out.println("Error: unable to divide by zero.");
-			result = 0;
-			return result;
+			calculationResult = 0;
+			return calculationResult;
 		} else {
-			result = value1 / value2;
-			return result;
+			calculationResult = calculationValue1 / calculationValue2;
+			return calculationResult;
 		}
 	}
 
 	public double modulo() {
 		getValues();
-		result = value1 % value2;
-		return result;
+		calculationResult = calculationValue1 % calculationValue2;
+		return calculationResult;
 	}
 	
 	public double raisePower() {
 		getValues();
-		result = Math.pow(value1,  value2);
-		return result;
+		calculationResult = Math.pow(calculationValue1, calculationValue2);
+		return calculationResult;
 	}
 
 	public double root() {
 		getValues();
-		result = Math.pow(value1, (1 / value2));
-		return result;
+		calculationResult = Math.pow(calculationValue1, (1 / calculationValue2));
+		return calculationResult;
 	}
 	
 	
@@ -118,24 +122,24 @@ public class Calculator {
 	 * Gets the first value to be used in calculations.
 	 * @return A double for the first user value.
 	 */
-	public double getValue1() {
-		return value1;
+	public double getCalculationValue1() {
+		return calculationValue1;
 	}
 	
 	/**
 	 * Gets the second value to be used in calculations.
 	 * @return A double for the second user value.
 	 */
-	public double getValue2() {
-		return value2;
+	public double getCalculationValue2() {
+		return calculationValue2;
 	}
 
 	/**
-	 * Gets the result of the most recent calculations.
-	 * @param result A double for the result of calculations.
+	 * Gets the calculationResult of the most recent calculations.
+	 * @return calculationResult A double for the calculationResult of calculations.
 	 */
-	public double getResult() {
-		return result;
+	public double getCalculationResult() {
+		return calculationResult;
 	}
 	
 	/**
@@ -148,11 +152,11 @@ public class Calculator {
 
 	/**
 	 * Sets the memory value.
+	 * @param memoryValue A double for the value to be stored in memory.
 	 */
 	public void setMemoryValue(double memoryValue) {
 		this.memoryValue = memoryValue;
 	}
-
 }
 
 /*
