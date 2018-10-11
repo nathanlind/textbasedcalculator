@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * TextBasedCalculator returns various calculation results
  * based on user input via the command line.
@@ -5,14 +7,11 @@
  * @version 1.0.0
  * date September 24 2018
  */
-
-import java.util.Scanner;
-
 public class TextBasedCalculator {
 
-	static double operand1 = 0;
-	static double operand2 = 0;
-	static Calculator calculator = new Calculator();
+	private static double operand1 = 0;
+	private static double operand2 = 0;
+	private static Calculator calculator = new Calculator();
 	private static Scanner valueScanner = new Scanner(System.in);
 
 	private static void getValues() {
@@ -84,30 +83,32 @@ public class TextBasedCalculator {
 			command = commandScanner.nextLine();
 			command = command.trim().toUpperCase();
 
-			if (command.equals("ADD") || command.equals("SUBTRACT") || command.equals("MULTIPLY") || command.equals("DIVIDE") || command.equals("MODULO")
-					|| command.equals("EXPONENT") || command.equals("ROOT")) {
-				getValues();
-			}
-			
 			if (command.equals("ADD")) {
+				getValues();
 				System.out.println(calculator.add(operand1, operand2));
 				
 			} else if (command.equals("SUBTRACT")) {
+				getValues();
 				System.out.println(calculator.subtract(operand1, operand2));
 				
 			} else if (command.equals("MULTIPLY")) {
+				getValues();
 				System.out.println(calculator.multiply(operand1, operand2));
 				
 			} else if (command.equals("DIVIDE")) {
+				getValues();
 				System.out.println(calculator.divide(operand1, operand2));
 				
 			} else if (command.equals("MODULO")) {
+				getValues();
 				System.out.println(calculator.modulo(operand1, operand2));
 				
 			} else if (command.equals("EXPONENT")) {
+				getValues();
 				System.out.println(calculator.raisePower(operand1, operand2));
 				
 			} else if (command.equals("ROOT")) {
+				getValues();
 				System.out.println(calculator.root(operand1, operand2));
 				
 			} else if (command.equals("SAVE")) {
@@ -128,11 +129,6 @@ public class TextBasedCalculator {
 						+ "\n\nOFF to quit. \n**********************************");
 			}
 
-			if (command.equals("ADD") || command.equals("SUBTRACT") || command.equals("MULTIPLY") || command.equals("DIVIDE") || command.equals("MODULO")
-			|| command.equals("EXPONENT") || command.equals("ROOT")) {
-				calculator.createLog(command, operand1, operand2);
-			}
-			
 		} while (!command.equals("OFF"));
 		
 		System.out.println("\n**Thank you for using TEXT BASED CALCULATOR.**");

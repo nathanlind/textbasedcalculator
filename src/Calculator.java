@@ -1,6 +1,5 @@
 import java.lang.Math;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
  * The Calculator class is used by the TextBasedCalculator class
@@ -17,21 +16,26 @@ public class Calculator {
 	
 	
 	public Calculator() {
-		
+
 	}
 
 	public double add(double operand1, double operand2) {
 		calculationResult = operand1 + operand2;
+		createLog("ADD", operand1, operand2);
 		return calculationResult;
+
 	}
 	
 	public double subtract(double operand1, double operand2) {
 		calculationResult = operand1 - operand2;
+		createLog("SUBTRACT", operand1, operand2);
 		return calculationResult;
+
 	}
 	
 	public double multiply(double operand1, double operand2) {
 		calculationResult = operand1 * operand2;
+		createLog("MULTIPLY", operand1, operand2);
 		return calculationResult;
 	}
 	
@@ -39,26 +43,35 @@ public class Calculator {
 		if (operand2 == 0) { //Checks if user is trying to divide by zero.
 			System.out.println("Error: unable to divide by zero.");
 			calculationResult = 0;
+			createLog("DIVIDE", operand1, operand2);
 			return calculationResult;
 		} else {
 			calculationResult = operand1 / operand2;
+			createLog("DIVIDE", operand1, operand2);
 			return calculationResult;
 		}
+
 	}
 
 	public double modulo(double operand1, double operand2) {
 		calculationResult = operand1 % operand2;
+		createLog("MODULO", operand1, operand2);
 		return calculationResult;
+
 	}
 	
 	public double raisePower(double operand1, double operand2) {
 		calculationResult = Math.pow(operand1, operand2);
+		createLog("EXPONENT", operand1, operand2);
 		return calculationResult;
+
 	}
 
 	public double root(double operand1, double operand2) {
 		calculationResult = Math.pow(operand1, (1 / operand2));
+		createLog("ROOT", operand1, operand2);
 		return calculationResult;
+
 	}
 
 	public void createLog(String command, double operand1, double operand2) {
@@ -71,7 +84,6 @@ public class Calculator {
 		}
 		System.out.printf("\nCurrent value saved in memory: %s\n", memoryValue);
 	}
-
 
 	/**
 	 * Gets the calculationResult of the most recent calculations.
