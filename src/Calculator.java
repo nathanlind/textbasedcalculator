@@ -74,7 +74,7 @@ public class Calculator {
 
 	}
 
-	public void createLog(String command, double operand1, double operand2) {
+	private void createLog(String command, double operand1, double operand2) {
 		actionLogs.add(new CalculationLog(command, operand1, operand2, calculationResult));
 	}
 

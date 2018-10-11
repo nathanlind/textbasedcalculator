@@ -127,6 +127,8 @@ public class TextBasedCalculator {
 						+ "\nMEM may be entered as a value to recall previously saved result. "
 						+ "\nLOG returns a log of all actions performed."
 						+ "\n\nOFF to quit. \n**********************************");
+			} else {
+				System.out.println("Command not recognized.");
 			}
 
 		} while (!command.equals("OFF"));
