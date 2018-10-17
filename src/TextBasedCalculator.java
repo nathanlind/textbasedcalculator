@@ -11,8 +11,8 @@ public class TextBasedCalculator {
 
 	private static double operand1 = 0;
 	private static double operand2 = 0;
-	private static Scanner valueScanner = new Scanner(System.in);
-	static Calculator calculator = Calculator.getInstance();
+	private static Scanner commandScanner = new Scanner(System.in);
+	private static Calculator calculator = Calculator.getInstance();
 
 
 	private static void getValues() {
@@ -23,7 +23,7 @@ public class TextBasedCalculator {
 		System.out.print("Enter first number: ");
 
 		try {
-			String input = valueScanner.nextLine();
+			String input = commandScanner.nextLine();
 			input = input.trim().toUpperCase();
 			operand1 = checkForSpecial(input);
 		}
@@ -38,7 +38,7 @@ public class TextBasedCalculator {
 		System.out.print("Enter second number: ");
 
 		try {
-			String input = valueScanner.nextLine();
+			String input = commandScanner.nextLine();
 			input = input.trim().toUpperCase();
 			operand2 = checkForSpecial(input);
 		}
@@ -68,7 +68,7 @@ public class TextBasedCalculator {
 	public static void main(String[] args) {
 		
 		String command = "";
-		Scanner commandScanner = new Scanner(System.in);
+		//Scanner commandScanner = new Scanner(System.in);
 
 		System.out.println("Type ON to begin.");
 		
