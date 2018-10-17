@@ -66,12 +66,11 @@ public class TextBasedCalculator {
 	 * @return nothing
 	 */
 	public static void main(String[] args) {
-		
+
 		String command = "";
-		//Scanner commandScanner = new Scanner(System.in);
 
 		System.out.println("Type ON to begin.");
-		
+
 		do {
 			command = commandScanner.nextLine();
 			command = command.trim().toUpperCase();
@@ -123,9 +122,9 @@ public class TextBasedCalculator {
 			} else if (command.equals("HELP")) {
 				System.out.println("\n**TEXT BASED CALCULATOR COMMANDS** \n\nADD \nSUBTRACT \n"
 						+ "MULTIPLY \nDIVIDE \nMODULO (Returns the remainder after division.) \n"
-						+ "EXPONENT (Raise base number to power.) \nROOT (Returns any root of base number.)"
+						+ "EXPONENT (Raise first number to power of second number.) \nROOT (Returns root of first number by second number.)"
 						+ "\n\nPI may be entered as a value. "
-						+ "\nSAVE may be entered to save last result to memory. "
+						+ "\nSAVE saves the last result to memory. "
 						+ "\nMEM may be entered as a value to recall previously saved result. "
 						+ "\nLOG returns a log of all actions performed."
 						+ "\n\nOFF to quit. \n**********************************");

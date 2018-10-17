@@ -1,6 +1,6 @@
 /**
- * The CalculationLog class is used by the TextBasedCalculator classes
- * to keep a running log of all actions performed
+ * The CalculationLog class is used by the Calculator class
+ * to keep a running log of all calculations performed
  * by the calculator.
  * @author Nathan Lindsey
  * @version 1.0.0

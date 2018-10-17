@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 /**
  * The Calculator class is used by the TextBasedCalculator class
- * to perform calculations and handle input of values used in calculations.
+ * to perform calculations.
  * @author Nathan Lindsey
  * @version 1.0.0
  * date September 24 2018
@@ -16,9 +16,8 @@ public final class Calculator {
 	ArrayList<CalculationLog> actionLogs = new ArrayList<CalculationLog>();
 	
 	
-	private Calculator() {
+	private Calculator() {}
 
-	}
 
 	public double add(double operand1, double operand2) {
 		calculationResult = operand1 + operand2;
@@ -44,7 +43,6 @@ public final class Calculator {
 		if (operand2 == 0) { //Checks if user is trying to divide by zero.
 			System.out.println("Error: unable to divide by zero.");
 			calculationResult = 0;
-			createLog("DIVIDE", operand1, operand2);
 			return calculationResult;
 		} else {
 			calculationResult = operand1 / operand2;
@@ -72,8 +70,9 @@ public final class Calculator {
 		calculationResult = Math.pow(operand1, (1 / operand2));
 		createLog("ROOT", operand1, operand2);
 		return calculationResult;
-
 	}
+
+
 
 	private void createLog(String command, double operand1, double operand2) {
 		actionLogs.add(new CalculationLog(command, operand1, operand2, calculationResult));
@@ -87,20 +86,21 @@ public final class Calculator {
 	}
 
 
+
 	public static Calculator getInstance() {
 	    return instance;
     }
 
 	/**
-	 * Gets the calculationResult of the most recent calculations.
-	 * @return calculationResult A double for the calculationResult of calculations.
+	 * Gets the calculationResult of the most recent calculation.
+	 * @return calculationResult A double for the result of calculations.
 	 */
 	public double getCalculationResult() {
 		return calculationResult;
 	}
 	
 	/**
-	 * Gets the memory value.
+	 * Returns the memory value.
 	 * @return A double containing the value saved in memory.
 	 */
 	public double getMemoryValue() {
