@@ -8,14 +8,15 @@ import java.util.ArrayList;
  * @version 1.0.0
  * date September 24 2018
  */
-public class Calculator {
+public final class Calculator {
 
+    private static Calculator instance = new Calculator();
 	private double calculationResult = 0;
 	private double memoryValue = 0;
 	ArrayList<CalculationLog> actionLogs = new ArrayList<CalculationLog>();
 	
 	
-	public Calculator() {
+	private Calculator() {
 
 	}
 
@@ -84,6 +85,11 @@ public class Calculator {
 		}
 		System.out.printf("\nCurrent value saved in memory: %s\n", memoryValue);
 	}
+
+
+	public static Calculator getInstance() {
+	    return instance;
+    }
 
 	/**
 	 * Gets the calculationResult of the most recent calculations.

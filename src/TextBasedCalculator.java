@@ -11,8 +11,9 @@ public class TextBasedCalculator {
 
 	private static double operand1 = 0;
 	private static double operand2 = 0;
-	private static Calculator calculator = new Calculator();
 	private static Scanner valueScanner = new Scanner(System.in);
+	static Calculator calculator = Calculator.getInstance();
+
 
 	private static void getValues() {
 		inputValue1();
@@ -57,6 +58,7 @@ public class TextBasedCalculator {
 		}
 		return Double.parseDouble(valueCheck);
 	}
+
 
 	/**
 	 * main is the main method
