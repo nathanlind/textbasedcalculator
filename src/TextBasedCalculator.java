@@ -139,7 +139,7 @@ public class TextBasedCalculator {
 			} else if (command.equals("HELP")) {
 				System.out.println("\n**TEXT BASED CALCULATOR COMMANDS** \n\nADD \nSUBTRACT \n"
 						+ "MULTIPLY \nDIVIDE \nMODULO (Returns the remainder after division.) \n"
-						+ "EXPONENT (Raise first number to power of second number.) \nROOT (Returns root of first number by second number.)"
+						+ "EXPONENT (Raise first number to power of second number.) \nROOT (Returns nth root of first number by second number.)"
 						+ "\n\nPI may be entered as a value. "
 						+ "\nSAVE saves the last result to memory. "
 						+ "\nMEM may be entered as a value to recall previously saved result. "

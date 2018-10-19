@@ -120,12 +120,12 @@ public final class Calculator {
 
     /**
      * Creates a new CalculationLog object and adds it to the actionLogs ArrayList.
-     * @param command A string containing the calculation operator.
+     * @param operator A string containing the calculation operator.
      * @param operand1 A double containing the first value used in the calculation.
      * @param operand2 A double containing the second value used in the calculation.
      */
-	private void createLog(String command, double operand1, double operand2) {
-		actionLogs.add(new CalculationLog(command, operand1, operand2, calculationResult));
+	private void createLog(String operator, double operand1, double operand2) {
+		actionLogs.add(new CalculationLog(operator, operand1, operand2, calculationResult));
 	}
 
     /**

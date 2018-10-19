@@ -15,12 +15,13 @@ public class CalculationLog {
 
     /**
      * Constructor for CalculationLog objects.
-     * @param command A string containing the type operator used in the calculation.
+     * @param operator A string containing the type operator used in the calculation.
      * @param value1 A double containing the first operand.
      * @param value2 A double containing the second operand.
      * @param result A double containing the result of the calculation.
      */
-	public CalculationLog(String command, double value1, double value2, double result) {
+	public CalculationLog(String operator, double value1, double value2, double result) {
+	    this.operator = operator;
 		this.operand1 = value1;
 		this.operand2 = value2;
 		this.calculationResult = result;
