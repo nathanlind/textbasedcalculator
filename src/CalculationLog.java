@@ -11,38 +11,25 @@ public class CalculationLog {
 	private double operand1 = 0;
 	private double operand2 = 0;
 	private double calculationResult = 0;
-	
+
+
+    /**
+     * Constructor for CalculationLog objects.
+     * @param command A string containing the type operator used in the calculation.
+     * @param value1 A double containing the first operand.
+     * @param value2 A double containing the second operand.
+     * @param result A double containing the result of the calculation.
+     */
 	public CalculationLog(String command, double value1, double value2, double result) {
 		this.operand1 = value1;
 		this.operand2 = value2;
 		this.calculationResult = result;
-		switch (command) {
-			case "ADD":
-				this.operator = "+";
-				break;
-			case "SUBTRACT":
-				this.operator = "-";
-				break;
-			case "MULTIPLY":
-				this.operator = "*";
-				break;
-			case "DIVIDE":
-				this.operator = "/";
-				break;
-			case "MODULO":
-				this.operator = "%";
-				break;
-			case "EXPONENT":
-				this.operator = "^";
-				break;
-			case "ROOT":
-				this.operator = "root";
-				break;
-			default:
-				break;
-		}
 	}
-	
+
+    /**
+     * Overrides the inherited toString method to return the object data in a readable format.
+     * @return A formatted string containing the contents of the CalculationLog object.
+     */
 	@Override
 	public String toString() {
 		return String.format("%s %s %s = %s.", this.operand1, this.operator, this.operand2, this.calculationResult);

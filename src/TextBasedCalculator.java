@@ -14,11 +14,18 @@ public class TextBasedCalculator {
 	private static Scanner commandScanner = new Scanner(System.in);
 	private static Calculator calculator = Calculator.getInstance();
 
-
-	private static void getValues() {
+	/**
+	 * Calls the inputValue1 and inputValue2 methods
+	 */
+	private static void getOperands() {
 		inputValue1();
 		inputValue2();
 	}
+
+    /**
+     * Gets user input for operand1 as string.  If user input is valid,
+     * calls the checkForSpecial method.
+     */
 	private static void inputValue1() {
 		System.out.print("Enter first number: ");
 
@@ -34,6 +41,11 @@ public class TextBasedCalculator {
 		}
 	}
 
+
+    /**
+     * Gets user input for operand2 as string.  If user input is valid,
+     * calls the checkForSpecial method.
+     */
 	private static void inputValue2() {
 		System.out.print("Enter second number: ");
 
@@ -49,6 +61,11 @@ public class TextBasedCalculator {
 		}
 	}
 
+    /**
+     *
+     * @param valueCheck A string for the user input to be checked for special commands.
+     * @return A double containing a value based on user input.
+     */
 	private static double checkForSpecial(String valueCheck) {
 		if (valueCheck.equals("PI")) {
 			return Math.PI;
@@ -62,7 +79,7 @@ public class TextBasedCalculator {
 
 	/**
 	 * main is the main method
-	 * @param args is an array of words passed in via the command line
+	 * @param args an array of words passed in via the command line
 	 * @return nothing
 	 */
 	public static void main(String[] args) {
@@ -85,31 +102,31 @@ public class TextBasedCalculator {
 			command = command.trim().toUpperCase();
 
 			if (command.equals("ADD")) {
-				getValues();
+				getOperands();
 				System.out.println(calculator.add(operand1, operand2));
 				
 			} else if (command.equals("SUBTRACT")) {
-				getValues();
+				getOperands();
 				System.out.println(calculator.subtract(operand1, operand2));
 				
 			} else if (command.equals("MULTIPLY")) {
-				getValues();
+				getOperands();
 				System.out.println(calculator.multiply(operand1, operand2));
 				
 			} else if (command.equals("DIVIDE")) {
-				getValues();
+				getOperands();
 				System.out.println(calculator.divide(operand1, operand2));
 				
 			} else if (command.equals("MODULO")) {
-				getValues();
+				getOperands();
 				System.out.println(calculator.modulo(operand1, operand2));
 				
 			} else if (command.equals("EXPONENT")) {
-				getValues();
+				getOperands();
 				System.out.println(calculator.raisePower(operand1, operand2));
 				
 			} else if (command.equals("ROOT")) {
-				getValues();
+				getOperands();
 				System.out.println(calculator.root(operand1, operand2));
 				
 			} else if (command.equals("SAVE")) {
