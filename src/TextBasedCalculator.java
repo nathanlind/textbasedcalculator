@@ -30,8 +30,7 @@ public class TextBasedCalculator {
      * calls the checkForSpecial method.
      * @return A double containing a value based on user input.
      */
-	private static double inputValue(){
-
+	private static double inputValue() {
 		try {
 			String input = commandScanner.nextLine();
 			input = input.trim().toUpperCase();
@@ -43,6 +42,24 @@ public class TextBasedCalculator {
 			return inputValue();
 		}
 	}
+
+    /**
+     * Gets user input for scientific notation.  Used instead of inputValue()
+     * to avoid recursive scientific notation calls.
+     * @return A double containing a value based on user input.
+     */
+	private static double sciNotationInput() {
+        try {
+            String input = commandScanner.nextLine();
+            input = input.trim().toUpperCase();
+            return Double.parseDouble(input);
+        }
+
+        catch (NumberFormatException e) {
+            System.out.println("Error - Please enter a number.");
+            return sciNotationInput();
+        }
+    }
 
     /**
      *
@@ -57,9 +74,9 @@ public class TextBasedCalculator {
 			return calculator.getMemoryValue();
 		} else if (valueCheck.equals("E")) {
 		    System.out.println("SCIENTIFIC NOTATION: Enter base number: ");
-		    double baseNumber = inputValue();
+		    double baseNumber = sciNotationInput();
 		    System.out.println("Enter power of 10: ");
-		    double powerOfTen = inputValue();
+		    double powerOfTen = sciNotationInput();
 		    return baseNumber * (calculator.raisePower(10, powerOfTen));
         }
 		return Double.parseDouble(valueCheck);
