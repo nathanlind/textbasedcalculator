@@ -20,7 +20,7 @@ public final class Calculator {
 	private Calculator() {}
 
 	/**
-	 * Calculates the sum of two numbers and calls createLog method to generate a log of this action.
+	 * Calculates the sum of two numbers and calls createLog() method to generate a log of this action.
 	 * @param operand1 A double containing the first value to be used in calculation.
 	 * @param operand2 A double containing the second value to be used in calculation.
 	 * @return calculationResult A double containing the sum of operand1 & operand2.
@@ -29,11 +29,10 @@ public final class Calculator {
 		calculationResult = operand1 + operand2;
 		createLog("+", operand1, operand2);
 		return calculationResult;
-
 	}
 
 	/**
-	 * Calculates the difference of two numbers and calls createLog method to generate a log of this action.
+	 * Calculates the difference of two numbers and calls createLog() method to generate a log of this action.
 	 * @param operand1 A double containing the first value to be used in calculation.
 	 * @param operand2 A double containing the second value to be used in calculation.
 	 * @return calculationResult A double containing the difference of operand1 & operand2.
@@ -42,11 +41,10 @@ public final class Calculator {
 		calculationResult = operand1 - operand2;
 		createLog("-", operand1, operand2);
 		return calculationResult;
-
 	}
 
 	/**
-	 * Calculates the product of two numbers and calls createLog method to generate a log of this action.
+	 * Calculates the product of two numbers and calls createLog() method to generate a log of this action.
 	 * @param operand1 A double containing the first value to be used in calculation.
 	 * @param operand2 A double containing the second value to be used in calculation.
 	 * @return calculationResult A double containing the product of operand1 & operand2.
@@ -58,7 +56,7 @@ public final class Calculator {
 	}
 
 	/**
-	 * Calculates the quotient of two numbers and calls createLog method to generate a log of this action.
+	 * Calculates the quotient of two numbers and calls createLog() method to generate a log of this action.
 	 * If user attempts to divide by zero, the method will print an error message,
 	 * set calculation result to 0, and no call to createLog will be made.
      * @param operand1 A double containing the value to be used as the dividend.
@@ -79,7 +77,7 @@ public final class Calculator {
 	}
 
 	/**
-	 * Calculates the remainder of dividing two numbers and calls createLog method to generate a log of this action.
+	 * Calculates the remainder of dividing two numbers and calls createLog() method to generate a log of this action.
 	 * @param operand1 A double containing the value to be used as the dividend.
 	 * @param operand2 A double containing the value to be used as the divisor.
 	 * @return calculationResult A double containing the remainder of dividing operand1 by operand2.
@@ -88,12 +86,11 @@ public final class Calculator {
 		calculationResult = operand1 % operand2;
 		createLog("%", operand1, operand2);
 		return calculationResult;
-
 	}
 
 	/**
 	 * Calculates the result of raising a number to the power of another number,
-     * and calls createLog method to generate a log of this action.
+     * and calls createLog() method to generate a log of this action.
 	 * @param operand1 A double containing the value to be used as the base number.
 	 * @param operand2 A double containing the value to be used as the exponent.
 	 * @return calculationResult A double containing the power of operand1 by operand2.
@@ -102,11 +99,11 @@ public final class Calculator {
 		calculationResult = Math.pow(operand1, operand2);
 		createLog("^", operand1, operand2);
 		return calculationResult;
-
 	}
 
     /**
-     * Calculates the nth root of a number.
+     * Calculates the nth root of a number, and calls createLog() method to generate
+	 * a log of this action.
      * @param operand1 A double containing the value to be used as the base number.
      * @param operand2 A double containing the value to be used as the root degree.
      * @return calculationResult A double containing the root of operand1 by operand2.
@@ -116,7 +113,6 @@ public final class Calculator {
 		createLog("root", operand1, operand2);
 		return calculationResult;
 	}
-
 
     /**
      * Creates a new CalculationLog object and adds it to the actionLogs ArrayList.
@@ -139,7 +135,6 @@ public final class Calculator {
 		System.out.printf("\nCurrent value saved in memory: %s\n", memoryValue);
 	}
 
-
     /**
      * Gets the only object available.
      * @return the Calculator object.
@@ -149,7 +144,7 @@ public final class Calculator {
     }
 
 	/**
-	 * Gets the calculationResult of the most recent calculation.
+	 * Gets the result of the most recent calculation.
 	 * @return calculationResult A double for the result of calculations.
 	 */
 	public double getCalculationResult() {

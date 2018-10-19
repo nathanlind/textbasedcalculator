@@ -15,26 +15,30 @@ public class TextBasedCalculator {
 	private static Calculator calculator = Calculator.getInstance();
 
 	/**
-	 * Calls the inputValue1 and inputValue2 methods
+	 * Calls the inputValue() method to get values to send to the calculator.
 	 */
 	private static void getOperands() {
         System.out.print("Enter first number: ");
         operand1 = inputValue();
         System.out.print("Enter second number: ");
         operand2 = inputValue();
-
 	}
 
     /**
-     * Gets user input for as string.  If user input is valid,
-     * calls the checkForSpecial method.
+     * Gets user input as string.  Checks for special commands such as PI,
+     * MEM, or E and calls the appropriate methods to handle them.
      * @return A double containing a value based on user input.
      */
 	private static double inputValue() {
 		try {
 			String input = commandScanner.nextLine();
 			input = input.trim().toUpperCase();
-			return checkForSpecial(input);
+			if (input.equals("PI") || input.equals("MEM")) {
+				return handlePiAndMem(input);
+			} else if (input.equals("E")) {
+				return handleSciNotation(input);
+			}
+			return Double.parseDouble(input);
 		}
 
 		catch (NumberFormatException e) {
@@ -44,44 +48,58 @@ public class TextBasedCalculator {
 	}
 
     /**
-     * Gets user input for scientific notation.  Used instead of inputValue()
-     * to avoid recursive scientific notation calls.
-     * @return A double containing a value based on user input.
+     * Handles user input of PI or MEM as a value. Returns Math.PI for PI
+     * or the value saved in calculator's memory for MEM.
+     * @param input A string containing user input from command line.
+     * @return A double containing a value based on user input
      */
-	private static double sciNotationInput() {
-        try {
-            String input = commandScanner.nextLine();
-            input = input.trim().toUpperCase();
-            return Double.parseDouble(input);
-        }
-
-        catch (NumberFormatException e) {
-            System.out.println("Error - Please enter a number.");
-            return sciNotationInput();
-        }
-    }
-
-    /**
-     *
-     * @param valueCheck A string for the user input to be checked for special commands.
-     * @return A double containing a value based on user input.
-     */
-	private static double checkForSpecial(String valueCheck) {
-		if (valueCheck.equals("PI")) {
+	private static double handlePiAndMem(String input) {
+		if (input.equals("PI")) {
 			return Math.PI;
-		} else if (valueCheck.equals("MEM")) {
+		} else if (input.equals("MEM")) {
 			System.out.printf("%s recalled from memory. \n\n", calculator.getMemoryValue());
 			return calculator.getMemoryValue();
-		} else if (valueCheck.equals("E")) {
-		    System.out.println("SCIENTIFIC NOTATION: Enter base number: ");
-		    double baseNumber = sciNotationInput();
-		    System.out.println("Enter power of 10: ");
-		    double powerOfTen = sciNotationInput();
-		    return baseNumber * (calculator.raisePower(10, powerOfTen));
-        }
-		return Double.parseDouble(valueCheck);
+		}
+		return Double.parseDouble(input);
 	}
 
+    /**
+     * Handles user input of E for scientific notation.  Calls the
+     * sciNotationInput() method to get values needed.
+     * @param input A string containing user input from command line.
+     * @return A double containing the result of scientific notation.
+     */
+	private static double handleSciNotation(String input) {
+		if (input.equals("E")) {
+			System.out.println("SCIENTIFIC NOTATION: Enter base number (PI or MEM may be used): ");
+			double baseNumber = sciNotationInput();
+			System.out.println("Enter power of 10 (PI or MEM may be used): ");
+			double powerOfTen = sciNotationInput();
+			return baseNumber * (calculator.raisePower(10, powerOfTen));
+		}
+		return Double.parseDouble(input);
+	}
+
+	/**
+	 * Gets user input for scientific notation.  Used in this case
+     * instead of inputValue() to avoid recursive scientific notation calls.
+	 * @return A double containing a value based on user input.
+	 */
+	private static double sciNotationInput() {
+		try {
+			String input = commandScanner.nextLine();
+			input = input.trim().toUpperCase();
+			if (input.equals("PI") || input.equals("MEM")) {
+				return handlePiAndMem(input);
+			}
+			return Double.parseDouble(input);
+		}
+
+		catch (NumberFormatException e) {
+			System.out.println("Error - Please enter a number, PI, or MEM.");
+			return sciNotationInput();
+		}
+	}
 
 	/**
 	 * main is the main method

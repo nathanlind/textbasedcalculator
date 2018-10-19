@@ -12,7 +12,6 @@ public class CalculationLog {
 	private double operand2 = 0;
 	private double calculationResult = 0;
 
-
     /**
      * Constructor for CalculationLog objects.
      * @param operator A string containing the type operator used in the calculation.
