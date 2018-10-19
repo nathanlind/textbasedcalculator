@@ -26,8 +26,9 @@ public class TextBasedCalculator {
 	}
 
     /**
-     * Gets user input for operand1 as string.  If user input is valid,
+     * Gets user input for as string.  If user input is valid,
      * calls the checkForSpecial method.
+     * @return A double containing a value based on user input.
      */
 	private static double inputValue(){
 
@@ -51,10 +52,16 @@ public class TextBasedCalculator {
 	private static double checkForSpecial(String valueCheck) {
 		if (valueCheck.equals("PI")) {
 			return Math.PI;
-		} else if (valueCheck.equals("MEM")){
+		} else if (valueCheck.equals("MEM")) {
 			System.out.printf("%s recalled from memory. \n\n", calculator.getMemoryValue());
 			return calculator.getMemoryValue();
-		}
+		} else if (valueCheck.equals("E")) {
+		    System.out.println("SCIENTIFIC NOTATION: Enter base number: ");
+		    double baseNumber = inputValue();
+		    System.out.println("Enter power of 10: ");
+		    double powerOfTen = inputValue();
+		    return baseNumber * (calculator.raisePower(10, powerOfTen));
+        }
 		return Double.parseDouble(valueCheck);
 	}
 
@@ -126,6 +133,7 @@ public class TextBasedCalculator {
 						+ "\n\nSAVE saves the last result to memory. "
 						+ "\nMEM may be entered as a value to recall previously saved result. "
                         + "\n\nPI may be entered as a value. "
+                        + "\n\nE may be entered as a value for scientific notation."
 						+ "\n\nOFF to quit. \n**********************************");
 			} else {
 				System.out.println("Command not recognized.");
