@@ -18,46 +18,28 @@ public class TextBasedCalculator {
 	 * Calls the inputValue1 and inputValue2 methods
 	 */
 	private static void getOperands() {
-		inputValue1();
-		inputValue2();
+        System.out.print("Enter first number: ");
+        operand1 = inputValue();
+        System.out.print("Enter second number: ");
+        operand2 = inputValue();
+
 	}
 
     /**
      * Gets user input for operand1 as string.  If user input is valid,
      * calls the checkForSpecial method.
      */
-	private static void inputValue1() {
-		System.out.print("Enter first number: ");
+	private static double inputValue(){
 
 		try {
 			String input = commandScanner.nextLine();
 			input = input.trim().toUpperCase();
-			operand1 = checkForSpecial(input);
+			return checkForSpecial(input);
 		}
 
 		catch (NumberFormatException e) {
 			System.out.println("Error - Please enter a number, MEM, or PI:");
-			inputValue1();
-		}
-	}
-
-
-    /**
-     * Gets user input for operand2 as string.  If user input is valid,
-     * calls the checkForSpecial method.
-     */
-	private static void inputValue2() {
-		System.out.print("Enter second number: ");
-
-		try {
-			String input = commandScanner.nextLine();
-			input = input.trim().toUpperCase();
-			operand2 = checkForSpecial(input);
-		}
-
-		catch (NumberFormatException e) {
-			System.out.println("Error - Please enter a number, MEM, or PI:");
-			inputValue2();
+			return inputValue();
 		}
 	}
 
