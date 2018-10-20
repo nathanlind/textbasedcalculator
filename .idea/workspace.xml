@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f692746f-16d5-435a-89e2-61d9aefaa432" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Operator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CalculationLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CalculationLog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculator.java" afterDir="false" />
@@ -54,35 +55,37 @@
     <session id="1291562584">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.1" value="2" />
+          <entry key="project.closed" value="15" />
+          <entry key="project.open.time.0" value="3" />
+          <entry key="project.open.time.1" value="8" />
           <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="5188" />
-          <entry key="txt" value="436" />
+          <entry key="java" value="6346" />
+          <entry key="txt" value="545" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5188" />
-          <entry key="PLAIN_TEXT" value="436" />
+          <entry key="JAVA" value="6346" />
+          <entry key="PLAIN_TEXT" value="545" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="1" />
+          <entry key="java" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="1" />
+          <entry key="JAVA" value="3" />
         </counts>
       </usages-collector>
     </session>
@@ -92,17 +95,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TextBasedCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="66" selection-start-line="28" selection-start-column="66" selection-end-line="28" selection-end-column="66" />
+            <state relative-caret-position="933">
+              <caret line="83" column="66" selection-start-line="83" selection-start-column="66" selection-end-line="83" selection-end-column="66" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+            <state relative-caret-position="1401">
+              <caret line="97" column="26" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -110,8 +113,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CalculationLog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="7" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Operator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+              <folding>
+                <element signature="e#235#236#0" expanded="true" />
+                <element signature="e#287#288#0" expanded="true" />
+                <element signature="e#693#694#0" expanded="true" />
+                <element signature="e#727#728#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,8 +153,9 @@
         <option value="$PROJECT_DIR$/src/Commands.java" />
         <option value="$PROJECT_DIR$/src/Command.java" />
         <option value="$PROJECT_DIR$/src/TextBasedCalculator.java" />
-        <option value="$PROJECT_DIR$/src/CalculationLog.java" />
         <option value="$PROJECT_DIR$/src/Calculator.java" />
+        <option value="$PROJECT_DIR$/src/CalculationLog.java" />
+        <option value="$PROJECT_DIR$/src/Operator.java" />
       </list>
     </option>
   </component>
@@ -156,6 +175,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -172,13 +192,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539988665359" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540073695605" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -234,7 +253,17 @@
       <workItem from="1539815065794" duration="1545000" />
       <workItem from="1539836100301" duration="62000" />
       <workItem from="1539979506108" duration="3311000" />
-      <workItem from="1539988829337" duration="2131000" />
+      <workItem from="1539988829337" duration="2798000" />
+      <workItem from="1540071599218" duration="119000" />
+      <workItem from="1540071764634" duration="30000" />
+      <workItem from="1540071807273" duration="89000" />
+      <workItem from="1540071913781" duration="72000" />
+      <workItem from="1540072054470" duration="70000" />
+      <workItem from="1540072154303" duration="591000" />
+      <workItem from="1540072756979" duration="258000" />
+      <workItem from="1540073041625" duration="39000" />
+      <workItem from="1540073093628" duration="73000" />
+      <workItem from="1540073183387" duration="464000" />
     </task>
     <task id="LOCAL-00001" summary="Update variable names for clarity">
       <created>1538869481577</created>
@@ -306,17 +335,23 @@
       <option name="project" value="LOCAL" />
       <updated>1539988646717</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Refactor input handling to allow MEM or PI to be entered as values when handling scientific notation.">
+      <created>1539991110577</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1539991110577</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28109000" />
+    <option name="totallyTimeSpent" value="30581000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0857295" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.09105431" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -325,7 +360,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32871288" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3108911" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3108911" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -363,28 +398,42 @@
     <MESSAGE value="Refactor getOperands() to only need one inputValue() method." />
     <MESSAGE value="Add support for scientific notation." />
     <MESSAGE value="Add new input method for scientific notation to avoid recursion." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add new input method for scientific notation to avoid recursion." />
+    <MESSAGE value="Refactor input handling to allow MEM or PI to be entered as values when handling scientific notation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor input handling to allow MEM or PI to be entered as values when handling scientific notation." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Command.java" />
     <entry file="file://$PROJECT_DIR$/src/TextBasedCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="66" selection-start-line="28" selection-start-column="66" selection-end-line="28" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CalculationLog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="933">
+          <caret line="83" column="66" selection-start-line="83" selection-start-column="66" selection-end-line="83" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        <state relative-caret-position="1401">
+          <caret line="97" column="26" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CalculationLog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Operator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding>
+            <element signature="e#235#236#0" expanded="true" />
+            <element signature="e#287#288#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
+            <element signature="e#727#728#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

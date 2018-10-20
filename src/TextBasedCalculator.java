@@ -75,7 +75,7 @@ public class TextBasedCalculator {
 			double baseNumber = sciNotationInput();
 			System.out.println("Enter power of 10 (PI or MEM may be used): ");
 			double powerOfTen = sciNotationInput();
-			return baseNumber * (calculator.raisePower(10, powerOfTen));
+			return baseNumber * (calculator.exponent(10, powerOfTen));
 		}
 		return Double.parseDouble(input);
 	}
@@ -147,7 +147,7 @@ public class TextBasedCalculator {
 				
 			} else if (command.equals("EXPONENT")) {
 				getOperands();
-				System.out.println(calculator.raisePower(operand1, operand2));
+				System.out.println(calculator.exponent(operand1, operand2));
 				
 			} else if (command.equals("ROOT")) {
 				getOperands();

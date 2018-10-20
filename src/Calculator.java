@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
 /**
- * The Calculator class is used by the TextBasedCalculator class
- * to perform calculations.
+ * The Calculator class is configured as a Singleton and is
+ * used by the TextBasedCalculator class to perform calculations.
  * @author Nathan Lindsey
  * @version 1.0.0
  * date September 24 2018
@@ -27,7 +27,7 @@ public final class Calculator {
 	 */
 	public double add(double operand1, double operand2) {
 		calculationResult = operand1 + operand2;
-		createLog("+", operand1, operand2);
+		createLog(Operator.ADD, operand1, operand2);
 		return calculationResult;
 	}
 
@@ -39,7 +39,7 @@ public final class Calculator {
 	 */
 	public double subtract(double operand1, double operand2) {
 		calculationResult = operand1 - operand2;
-		createLog("-", operand1, operand2);
+		createLog(Operator.SUBTRACT, operand1, operand2);
 		return calculationResult;
 	}
 
@@ -51,7 +51,7 @@ public final class Calculator {
 	 */
 	public double multiply(double operand1, double operand2) {
 		calculationResult = operand1 * operand2;
-		createLog("*", operand1, operand2);
+		createLog(Operator.MULTIPLY, operand1, operand2);
 		return calculationResult;
 	}
 
@@ -70,7 +70,7 @@ public final class Calculator {
 			return calculationResult;
 		} else {
 			calculationResult = operand1 / operand2;
-			createLog("/", operand1, operand2);
+			createLog(Operator.DIVIDE, operand1, operand2);
 			return calculationResult;
 		}
 
@@ -84,7 +84,7 @@ public final class Calculator {
 	 */
 	public double modulo(double operand1, double operand2) {
 		calculationResult = operand1 % operand2;
-		createLog("%", operand1, operand2);
+		createLog(Operator.MODULO, operand1, operand2);
 		return calculationResult;
 	}
 
@@ -95,9 +95,9 @@ public final class Calculator {
 	 * @param operand2 A double containing the value to be used as the exponent.
 	 * @return calculationResult A double containing the power of operand1 by operand2.
 	 */
-	public double raisePower(double operand1, double operand2) {
+	public double exponent(double operand1, double operand2) {
 		calculationResult = Math.pow(operand1, operand2);
-		createLog("^", operand1, operand2);
+		createLog(Operator.EXPONENT, operand1, operand2);
 		return calculationResult;
 	}
 
@@ -110,7 +110,7 @@ public final class Calculator {
      */
 	public double root(double operand1, double operand2) {
 		calculationResult = Math.pow(operand1, (1 / operand2));
-		createLog("root", operand1, operand2);
+		createLog(Operator.ROOT, operand1, operand2);
 		return calculationResult;
 	}
 
@@ -120,7 +120,7 @@ public final class Calculator {
      * @param operand1 A double containing the first value used in the calculation.
      * @param operand2 A double containing the second value used in the calculation.
      */
-	private void createLog(String operator, double operand1, double operand2) {
+	private void createLog(Operator operator, double operand1, double operand2) {
 		actionLogs.add(new CalculationLog(operator, operand1, operand2, calculationResult));
 	}
 
