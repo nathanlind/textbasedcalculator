@@ -19,7 +19,7 @@ public enum Operator {
 
     /**
      * Enum constructor to initialize instance fields.
-     * @param operatorSymbol
+     * @param operatorSymbol A String containing the name of the specific operator symbol.
      */
     Operator(String operatorSymbol) {
         this.operatorSymbol = operatorSymbol;

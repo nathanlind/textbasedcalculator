@@ -12,7 +12,7 @@ public final class Calculator {
     private static Calculator instance = new Calculator();
 	private double calculationResult = 0;
 	private double memoryValue = 0;
-	ArrayList<CalculationLog> actionLogs = new ArrayList<CalculationLog>();
+	private ArrayList<CalculationLog> actionLogs = new ArrayList<CalculationLog>();
 
     /**
      * Private constructor configuring the Calculator class as a Singleton.
