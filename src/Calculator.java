@@ -20,7 +20,7 @@ public final class Calculator {
 	private Calculator() {}
 
 	/**
-	 * Calculates the sum of two numbers and calls createLog() method to generate a log of this action.
+	 * add: Calculates the sum of two numbers and calls createLog() method to generate a log of this action.
 	 * @param operand1 A double containing the first value to be used in calculation.
 	 * @param operand2 A double containing the second value to be used in calculation.
 	 * @return calculationResult A double containing the sum of operand1 & operand2.
@@ -32,7 +32,7 @@ public final class Calculator {
 	}
 
 	/**
-	 * Calculates the difference of two numbers and calls createLog() method to generate a log of this action.
+	 * subtract: Calculates the difference of two numbers and calls createLog() method to generate a log of this action.
 	 * @param operand1 A double containing the first value to be used in calculation.
 	 * @param operand2 A double containing the second value to be used in calculation.
 	 * @return calculationResult A double containing the difference of operand1 & operand2.
@@ -44,7 +44,7 @@ public final class Calculator {
 	}
 
 	/**
-	 * Calculates the product of two numbers and calls createLog() method to generate a log of this action.
+	 * multiply: Calculates the product of two numbers and calls createLog() method to generate a log of this action.
 	 * @param operand1 A double containing the first value to be used in calculation.
 	 * @param operand2 A double containing the second value to be used in calculation.
 	 * @return calculationResult A double containing the product of operand1 & operand2.
@@ -56,7 +56,7 @@ public final class Calculator {
 	}
 
 	/**
-	 * Calculates the quotient of two numbers and calls createLog() method to generate a log of this action.
+	 * divide: Calculates the quotient of two numbers and calls createLog() method to generate a log of this action.
 	 * If user attempts to divide by zero, the method will print an error message,
 	 * set calculation result to 0, and no call to createLog will be made.
      * @param operand1 A double containing the value to be used as the dividend.
@@ -77,7 +77,7 @@ public final class Calculator {
 	}
 
 	/**
-	 * Calculates the remainder of dividing two numbers and calls createLog() method to generate a log of this action.
+	 * modulo: Calculates the remainder of dividing two numbers and calls createLog() method to generate a log of this action.
 	 * @param operand1 A double containing the value to be used as the dividend.
 	 * @param operand2 A double containing the value to be used as the divisor.
 	 * @return calculationResult A double containing the remainder of dividing operand1 by operand2.
@@ -89,7 +89,7 @@ public final class Calculator {
 	}
 
 	/**
-	 * Calculates the result of raising a number to the power of another number,
+	 * exponent: Calculates the result of raising a number to the power of another number,
      * and calls createLog() method to generate a log of this action.
 	 * @param operand1 A double containing the value to be used as the base number.
 	 * @param operand2 A double containing the value to be used as the exponent.
@@ -102,7 +102,7 @@ public final class Calculator {
 	}
 
     /**
-     * Calculates the nth root of a number, and calls createLog() method to generate
+     * root: Calculates the nth root of a number, and calls createLog() method to generate
 	 * a log of this action.
      * @param operand1 A double containing the value to be used as the base number.
      * @param operand2 A double containing the value to be used as the root degree.
@@ -115,7 +115,7 @@ public final class Calculator {
 	}
 
     /**
-     * Creates a new CalculationLog object and adds it to the actionLogs ArrayList.
+     * createLog: Creates a new CalculationLog object and adds it to the actionLogs ArrayList.
      * @param operator A string containing the calculation operator.
      * @param operand1 A double containing the first value used in the calculation.
      * @param operand2 A double containing the second value used in the calculation.
@@ -125,7 +125,7 @@ public final class Calculator {
 	}
 
     /**
-     * Uses an enhanced for to call the toString method on each object in the actionLogs ArrayList
+     * printLogs: Uses an enhanced for to call the toString method on each object in the actionLogs ArrayList
      * in the order they were created.
      */
 	public void printLogs() {
@@ -136,7 +136,7 @@ public final class Calculator {
 	}
 
     /**
-     * Gets the only object available.
+     * getInstance: Gets the only object available.
      * @return the Calculator object.
      */
 	public static Calculator getInstance() {
@@ -144,7 +144,7 @@ public final class Calculator {
     }
 
 	/**
-	 * Gets the result of the most recent calculation.
+	 * getCalculationResult: Gets the result of the most recent calculation.
 	 * @return calculationResult A double for the result of calculations.
 	 */
 	public double getCalculationResult() {
@@ -152,7 +152,7 @@ public final class Calculator {
 	}
 	
 	/**
-	 * Returns the memory value.
+	 * getMemoryValue: Returns the memory value.
 	 * @return A double containing the value saved in memory.
 	 */
 	public double getMemoryValue() {
@@ -160,7 +160,7 @@ public final class Calculator {
 	}
 
 	/**
-	 * Sets the memory value.
+	 * setMemoryValue: Sets the memory value.
 	 * @param memoryValue A double for the value to be stored in memory.
 	 */
 	public void setMemoryValue(double memoryValue) {

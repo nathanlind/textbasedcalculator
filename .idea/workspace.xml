@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Operator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TextBasedCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextBasedCalculator.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,29 +54,31 @@
     <session id="1291562584">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
+          <entry key="project.closed" value="23" />
           <entry key="project.open.time.0" value="3" />
-          <entry key="project.open.time.1" value="8" />
+          <entry key="project.open.time.1" value="11" />
           <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.12" value="2" />
+          <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="6458" />
-          <entry key="txt" value="636" />
+          <entry key="java" value="6860" />
+          <entry key="txt" value="674" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6458" />
-          <entry key="PLAIN_TEXT" value="636" />
+          <entry key="JAVA" value="6860" />
+          <entry key="PLAIN_TEXT" value="674" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -95,8 +98,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TextBasedCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+            <state relative-caret-position="2130">
+              <caret line="142" column="16" lean-forward="true" selection-start-line="142" selection-start-column="16" selection-end-line="142" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -104,8 +107,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+            <state relative-caret-position="2430">
+              <caret line="162" column="23" selection-start-line="162" selection-start-column="23" selection-end-line="162" selection-end-column="23" />
+              <folding>
+                <element signature="e#5879#5880#0" expanded="true" />
+                <element signature="e#5907#5908#0" expanded="true" />
+                <element signature="e#6081#6082#0" expanded="true" />
+                <element signature="e#6112#6113#0" expanded="true" />
+                <element signature="e#6247#6248#0" expanded="true" />
+                <element signature="e#6272#6273#0" expanded="true" />
+                <element signature="e#6430#6431#0" expanded="true" />
+                <element signature="e#6467#6468#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,8 +126,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CalculationLog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+            <state relative-caret-position="435">
+              <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -122,12 +135,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Operator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="90" selection-start-line="21" selection-start-column="90" selection-end-line="21" selection-end-column="90" />
-              <folding>
-                <element signature="e#562#563#0" expanded="true" />
-                <element signature="e#614#615#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="390">
+              <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -150,10 +159,10 @@
       <list>
         <option value="$PROJECT_DIR$/src/Commands.java" />
         <option value="$PROJECT_DIR$/src/Command.java" />
-        <option value="$PROJECT_DIR$/src/TextBasedCalculator.java" />
         <option value="$PROJECT_DIR$/src/CalculationLog.java" />
-        <option value="$PROJECT_DIR$/src/Operator.java" />
+        <option value="$PROJECT_DIR$/src/TextBasedCalculator.java" />
         <option value="$PROJECT_DIR$/src/Calculator.java" />
+        <option value="$PROJECT_DIR$/src/Operator.java" />
       </list>
     </option>
   </component>
@@ -172,7 +181,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -190,6 +198,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -263,7 +272,13 @@
       <workItem from="1540073093628" duration="73000" />
       <workItem from="1540073183387" duration="935000" />
       <workItem from="1540407485392" duration="133000" />
-      <workItem from="1540410143538" duration="340000" />
+      <workItem from="1540410143538" duration="400000" />
+      <workItem from="1540419057155" duration="1550000" />
+      <workItem from="1540421129695" duration="824000" />
+      <workItem from="1540425267576" duration="18000" />
+      <workItem from="1540427039948" duration="2231000" />
+      <workItem from="1540863525311" duration="486000" />
+      <workItem from="1541608202987" duration="200000" />
     </task>
     <task id="LOCAL-00001" summary="Update variable names for clarity">
       <created>1538869481577</created>
@@ -349,17 +364,24 @@
       <option name="project" value="LOCAL" />
       <updated>1540073718019</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fix Javadoc comment on Operator enum">
+      <created>1540410505334</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1540410505337</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31525000" />
+    <option name="totallyTimeSpent" value="36894000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09211928" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12460064" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -368,7 +390,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32871288" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3108911" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.40656933" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -380,7 +402,7 @@
       <window_info anchor="bottom" id="Messages" order="11" weight="0.329718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24980143" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Database" order="5" />
@@ -408,39 +430,46 @@
     <MESSAGE value="Add new input method for scientific notation to avoid recursion." />
     <MESSAGE value="Refactor input handling to allow MEM or PI to be entered as values when handling scientific notation." />
     <MESSAGE value="Add an Operator enum to enforce the types of operator sent to CalculationLog" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add an Operator enum to enforce the types of operator sent to CalculationLog" />
+    <MESSAGE value="Fix Javadoc comment on Operator enum" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Javadoc comment on Operator enum" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Command.java" />
     <entry file="file://$PROJECT_DIR$/src/TextBasedCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        <state relative-caret-position="2130">
+          <caret line="142" column="16" lean-forward="true" selection-start-line="142" selection-start-column="16" selection-end-line="142" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        <state relative-caret-position="2430">
+          <caret line="162" column="23" selection-start-line="162" selection-start-column="23" selection-end-line="162" selection-end-column="23" />
+          <folding>
+            <element signature="e#5879#5880#0" expanded="true" />
+            <element signature="e#5907#5908#0" expanded="true" />
+            <element signature="e#6081#6082#0" expanded="true" />
+            <element signature="e#6112#6113#0" expanded="true" />
+            <element signature="e#6247#6248#0" expanded="true" />
+            <element signature="e#6272#6273#0" expanded="true" />
+            <element signature="e#6430#6431#0" expanded="true" />
+            <element signature="e#6467#6468#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CalculationLog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+        <state relative-caret-position="435">
+          <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Operator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="90" selection-start-line="21" selection-start-column="90" selection-end-line="21" selection-end-column="90" />
-          <folding>
-            <element signature="e#562#563#0" expanded="true" />
-            <element signature="e#614#615#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="390">
+          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
         </state>
       </provider>
     </entry>

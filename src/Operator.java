@@ -26,7 +26,7 @@ public enum Operator {
     }
 
     /**
-     * Returns value for the appropriate enum.
+     * getOperatorSymbol: Returns value for the appropriate enum.
      * @return A string containing an operator symbol.
      */
     public String getOperatorSymbol() {

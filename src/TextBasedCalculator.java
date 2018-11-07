@@ -15,7 +15,7 @@ public class TextBasedCalculator {
 	private static Calculator calculator = Calculator.getInstance();
 
 	/**
-	 * Calls the inputValue() method to get values to send to the calculator.
+	 * getOperands: Calls the inputValue() method to get values to send to the calculator.  Returns: nothing
 	 */
 	private static void getOperands() {
         System.out.print("Enter first number: ");
@@ -25,7 +25,7 @@ public class TextBasedCalculator {
 	}
 
     /**
-     * Gets user input as string.  Checks for special commands such as PI,
+     * inputValue: Gets user input as string.  Checks for special commands such as PI,
      * MEM, or E and calls the appropriate methods to handle them.
      * @return A double containing a value based on user input.
      */
@@ -42,13 +42,13 @@ public class TextBasedCalculator {
 		}
 
 		catch (NumberFormatException e) {
-			System.out.println("Error - Please enter a number, MEM, or PI:");
+			System.out.println("Error - Please enter a number, MEM, PI, or E:");
 			return inputValue();
 		}
 	}
 
     /**
-     * Handles user input of PI or MEM as a value. Returns Math.PI for PI
+     * handlePiAndMem: Handles user input of PI or MEM as a value. Returns Math.PI for PI
      * or the value saved in calculator's memory for MEM.
      * @param input A string containing user input from command line.
      * @return A double containing a value based on user input
@@ -64,8 +64,8 @@ public class TextBasedCalculator {
 	}
 
     /**
-     * Handles user input of E for scientific notation.  Calls the
-     * sciNotationInput() method to get values needed.
+     * handleSciNotation: Handles user input of E for scientific notation.  Calls the
+     * sciNotationInput() method to get base value and power of E.
      * @param input A string containing user input from command line.
      * @return A double containing the result of scientific notation.
      */
@@ -81,8 +81,8 @@ public class TextBasedCalculator {
 	}
 
 	/**
-	 * Gets user input for scientific notation.  Used in this case
-     * instead of inputValue() to avoid recursive scientific notation calls.
+	 * sciNotationInput: Gets user input for scientific notation.  Used in this case
+     * instead of inputValue() to avoid repeated inputs of E.
 	 * @return A double containing a value based on user input.
 	 */
 	private static double sciNotationInput() {
@@ -157,19 +157,19 @@ public class TextBasedCalculator {
 				calculator.setMemoryValue(calculator.getCalculationResult());
 				System.out.printf("%s saved to memory. \n\n", calculator.getMemoryValue());
 				
-			} else if (command.equals("LOG")) {
+			} else if (command.equals("PRINT")) {
 				calculator.printLogs();
 				
 			} else if (command.equals("HELP")) {
 				System.out.println("\n**TEXT BASED CALCULATOR COMMANDS** \n\nADD \nSUBTRACT"
 						+ "\nMULTIPLY \nDIVIDE \nMODULO (Returns the remainder after division.)"
 						+ "\nEXPONENT (Raise first number to power of second number.) \nROOT (Returns nth root of first number by second number.)"
-                        + "\n\nLOG returns a log of all actions performed."
-						+ "\n\nSAVE saves the last result to memory. "
+                        + "\n\nPRINT returns a log of all actions performed and the current value saved to memory."
+						+ "\nSAVE saves the last result to memory. "
 						+ "\nMEM may be entered as a value to recall previously saved result. "
-                        + "\n\nPI may be entered as a value. "
-                        + "\n\nE may be entered as a value for scientific notation."
-						+ "\n\nOFF to quit. \n**********************************");
+                        + "\nPI may be entered as a value. "
+                        + "\nE may be entered as a value for scientific notation."
+						+ "\nOFF to quit. \n\n**********************************");
 			} else {
 				System.out.println("Command not recognized.");
 			}
