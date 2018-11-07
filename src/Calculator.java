@@ -119,6 +119,7 @@ public final class Calculator {
      * @param operator A string containing the calculation operator.
      * @param operand1 A double containing the first value used in the calculation.
      * @param operand2 A double containing the second value used in the calculation.
+	 * @return nothing
      */
 	private void createLog(Operator operator, double operand1, double operand2) {
 		actionLogs.add(new CalculationLog(operator, operand1, operand2, calculationResult));
@@ -127,6 +128,7 @@ public final class Calculator {
     /**
      * printLogs: Uses an enhanced for to call the toString method on each object in the actionLogs ArrayList
      * in the order they were created.
+	 * @return nothing
      */
 	public void printLogs() {
 		for (CalculationLog log : actionLogs) {
@@ -162,6 +164,7 @@ public final class Calculator {
 	/**
 	 * setMemoryValue: Sets the memory value.
 	 * @param memoryValue A double for the value to be stored in memory.
+	 * @return nothing
 	 */
 	public void setMemoryValue(double memoryValue) {
 		this.memoryValue = memoryValue;

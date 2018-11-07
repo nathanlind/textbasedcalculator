@@ -15,7 +15,8 @@ public class TextBasedCalculator {
 	private static Calculator calculator = Calculator.getInstance();
 
 	/**
-	 * getOperands: Calls the inputValue() method to get values to send to the calculator.  Returns: nothing
+	 * getOperands: Calls the inputValue() method to get values to send to the calculator.
+	 * @return nothing
 	 */
 	private static void getOperands() {
         System.out.print("Enter first number: ");

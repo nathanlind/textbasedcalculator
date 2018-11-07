@@ -18,6 +18,7 @@ public class CalculationLog {
      * @param value1 A double containing the first operand.
      * @param value2 A double containing the second operand.
      * @param result A double containing the result of the calculation.
+	 * @return nothing
      */
 	public CalculationLog(Operator operator, double value1, double value2, double result) {
         this.operator = operator.getOperatorSymbol();
