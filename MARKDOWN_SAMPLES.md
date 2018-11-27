@@ -20,4 +20,25 @@
 
 A CNN LINK: https://cnn.com
 
-[An internal repo link](..//README.md)
+[An internal repo link](..//master/README.md)
+
+```Java
+public class CodeBlock {
+    public static void main(String[] args) {
+        System.out.println("This is a block of code!");
+    }
+}
+```
+
+> Four score and seven years ago,
+> our forefathers...
+
+Horizontal Rule
+---
+
+| THIS| IS A | TABLE |
+|:----|:----:|------:|
+|left-aligned|centered|right-aligned|
+|1|2|3|
+
+:+1:
