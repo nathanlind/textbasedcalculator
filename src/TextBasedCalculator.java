@@ -15,46 +15,44 @@ public class TextBasedCalculator {
 	private static Calculator calculator = Calculator.getInstance();
 
 	/**
-	 * getOperands: Calls the inputValue() method to get values to send to the calculator.
+	 * getOperands: Calls the getUserInput() method to get values to send to the calculator.
 	 * @return nothing
 	 */
 	private static void getOperands() {
         System.out.print("Enter first number: ");
-        operand1 = inputValue();
+        operand1 = getUserInput();
         System.out.print("Enter second number: ");
-        operand2 = inputValue();
+        operand2 = getUserInput();
 	}
 
     /**
-     * inputValue: Gets user input as string.  Checks for special commands such as PI,
+     * getUserInput: Gets user input as string.  Checks for special commands such as PI,
      * MEM, or E and calls the appropriate methods to handle them.
      * @return A double containing a value based on user input.
      */
-	private static double inputValue() {
+	private static double getUserInput() {
 		try {
 			String input = commandScanner.nextLine();
 			input = input.trim().toUpperCase();
 			if (input.equals("PI") || input.equals("MEM")) {
-				return handlePiAndMem(input);
+				return handlePiOrMem(input);
 			} else if (input.equals("E")) {
 				return handleSciNotation(input);
 			}
 			return Double.parseDouble(input);
-		}
-
-		catch (NumberFormatException e) {
+		} catch (NumberFormatException e) {
 			System.out.println("Error - Please enter a number, MEM, PI, or E:");
-			return inputValue();
+			return getUserInput();
 		}
 	}
 
     /**
-     * handlePiAndMem: Handles user input of PI or MEM as a value. Returns Math.PI for PI
+     * handlePiOrMem: Handles user input of PI or MEM as a value. Returns Math.PI for PI
      * or the value saved in calculator's memory for MEM.
      * @param input A string containing user input from command line.
      * @return A double containing a value based on user input
      */
-	private static double handlePiAndMem(String input) {
+	private static double handlePiOrMem(String input) {
 		if (input.equals("PI")) {
 			return Math.PI;
 		} else if (input.equals("MEM")) {
@@ -66,39 +64,37 @@ public class TextBasedCalculator {
 
     /**
      * handleSciNotation: Handles user input of E for scientific notation.  Calls the
-     * sciNotationInput() method to get base value and power of E.
+     * getSciNotationInput() method to get base value and power of E.
      * @param input A string containing user input from command line.
      * @return A double containing the result of scientific notation.
      */
 	private static double handleSciNotation(String input) {
 		if (input.equals("E")) {
 			System.out.println("SCIENTIFIC NOTATION: Enter base number (PI or MEM may be used): ");
-			double baseNumber = sciNotationInput();
+			double baseNumber = getSciNotationInput();
 			System.out.println("Enter power of 10 (PI or MEM may be used): ");
-			double powerOfTen = sciNotationInput();
+			double powerOfTen = getSciNotationInput();
 			return baseNumber * (calculator.exponent(10, powerOfTen));
 		}
 		return Double.parseDouble(input);
 	}
 
 	/**
-	 * sciNotationInput: Gets user input for scientific notation.  Used in this case
-     * instead of inputValue() to avoid repeated inputs of E.
+	 * getSciNotationInput: Gets user input for scientific notation.  Used in this case
+     * instead of getUserInput() to avoid repeated inputs of E.
 	 * @return A double containing a value based on user input.
 	 */
-	private static double sciNotationInput() {
+	private static double getSciNotationInput() {
 		try {
 			String input = commandScanner.nextLine();
 			input = input.trim().toUpperCase();
 			if (input.equals("PI") || input.equals("MEM")) {
-				return handlePiAndMem(input);
+				return handlePiOrMem(input);
 			}
 			return Double.parseDouble(input);
-		}
-
-		catch (NumberFormatException e) {
+		} catch (NumberFormatException e) {
 			System.out.println("Error - Please enter a number, PI, or MEM.");
-			return sciNotationInput();
+			return getSciNotationInput();
 		}
 	}
 

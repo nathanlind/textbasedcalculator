@@ -73,7 +73,6 @@ public final class Calculator {
 			createLog(Operator.DIVIDE, operand1, operand2);
 			return calculationResult;
 		}
-
 	}
 
 	/**
